@@ -45,31 +45,45 @@ You've the choice to choose 1,2 or 3 of them.
 
 `let styleText = {};`
 
+
 Example:
 
 let background: {
-justifyContent: "right",
-backgroundColor: "red",
-opacity: "0.7",
+  justifyContent: "left",
+  backgroundColor: "red",
 }
 
 let containerModal: {
-width: "200px",
-height: "70px",
-border: "2px solid orange",
+  justifyContent: "left",
+  marginLeft: "50px",
+  paddingLeft: "50px",
 }
 
-let styleText: {
-color: "red",
-fontSize: "20px",
-}
+let styleText = {
+  color: "green",
+  textDecoration: "underline",
+};
 
-### 2.2 Finally, you just need to add properties that you need to the props modal component.
+### 2.2 Apply your custom style that you need to the props modal component.
 
 Below, there is an example if you want to change properties of theses 3 custom part.
 
 `<ModalDialog name="Your Text" background={background} containerModal={containerModal} styleText={styleText}/>`
 
-You can use 1 or 2 of them too, as you need.
+You can use 1 or 2, 3 of them too, as you need.
+
+## 3 Add event or do something when you click to the cross or to the background area of you library
+
+it's an event onClick, you just need to add the "handleClick" on props.
+
+then, replace "do something" like in the example below by what do you want you need to do for your project.
+
+
+Example:
+
+`<ModalDialog text="Employee Created!" handleClick={() => "Do something"} background={background} containerModal={containerModal}/>`
+
+
+That's it.
 
 Enjoy!
